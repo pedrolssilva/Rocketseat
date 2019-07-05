@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        //Tipos basicos
+        var nome = "Diego"; //String
+        var idade = 23; //int
+        var peso = 80.5; //Float
+        var humano = true; //Boolean
+        var alunos = ['Diego', 'Gabriel', 'Lucas']; // array
+
+        var aluno = { //Object
+            nome: alunos[2],
+            idade: 23,
+            peso: 80.5,
+            humano: true
+        };
+
+        //Operações matemáticas:
+        var x = 10,
+            y = 5;
+        x += 3;
+        var resultado = x + y;
+        console.log(resultado);
+
+        //Functions:
+        function soma(numero1, numero2) {
+            var resultado = numero1 + numero2;
+            return resultado;
+        }
+
+        //condicionais
+        function retornaSexo(sexo) {
+            //M, F
+            //Masculino, Feminino
+            // if (sexo === 'M') {
+            //     return 'Masculino';
+            // }
+            // else if (sexo === 'F') {
+            //     return 'Feminino';
+            // }
+            // else {
+            //     return 'Outro';
+            // }
+
+            switch (sexo) {
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Outro';
+            }
+        }
+
+        //Operadores logicos:
+        //and, or, not
+        var sexo = 'F',
+            idade = 18;
+        if (sexo === 'M' && idade >= 23) {
+            console.log('OK');
+        }
+
+        //Condição ternária:
+        // quando tem um IF e ELSE
+        var retorno = sexo === 'M' ? 'Masculino' : 'Feminino';
+
+        //Estruturas de repetição
+        //for and While
+        for (let i = 0; i < 100; i++) {
+            console.log(i);
+        }
+
+        var j = 0;
+        while (j <= 100) {
+            console.log(j);
+        }
+
+        //Intervalos e Timeout:
+        // um for é um intervalo
+        // while é um timeout
+    </script>
+</body>
+
+</html>
