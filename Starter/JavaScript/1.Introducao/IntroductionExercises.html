@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //Ex1
+        var endereco = {
+            rua: "Rua dos Pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        console.log("O usuario mora em " + endereco.cidade + " " + endereco.uf +
+            ",no bairro" + endereco.bairro + ", na rua \"" + endereco.rua + "\" com nº " + endereco.numero);
+
+        // ------------------------------------------------
+        //Ex2
+        function showEven(startInterval, endInterval) {
+            for (let i = startInterval; i <= endInterval; i++) {
+                if (i % 2 === 0) {
+                    console.log(i)
+                }
+            }
+        }
+        //showEven(2, 45);
+        // ------------------------------------------------
+        //Ex3
+        var skills = ["Javascript", "ReactJS", "React Native"];
+
+        function hasSkills(skill) {
+            return skills.indexOf(skill) !== -1;
+        }
+        console.log(hasSkills("ReactJS"));
+
+        // ------------------------------------------------
+        //Ex4
+        function experience(years) {
+            if (years <= 1) {
+                return "Iniciante";
+            } else if (years <= 3) {
+                return "Intermediário";
+            } else if (years <= 6) {
+                return "Avançado";
+            } else {
+                return "Jedi Master";
+            }
+        }
+        console.log(experience(2));
+
+        // ------------------------------------------------
+        //Ex5
+        function exibeHabilidades(usuarios) {
+            for (usuario of usuarios) {
+                console.log(
+                    "O " +
+                    usuario.nome +
+                    " possui as habilidades: " +
+                    usuario.habilidades.join(", ")
+                );
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        exibeHabilidades(usuarios);
+    </script>
+</body>
+
+</html>
