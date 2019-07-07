@@ -1,0 +1,64 @@
+<html>
+
+    <body>
+        <div id="main">
+            <button name="addBox" id="addBoxButton">Create box</button>
+        </div>
+
+        <div id="listNames">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
+        </div>
+
+
+        <script>
+
+            //Ex1:
+            var addBoxButton = document.querySelector('#addBoxButton');
+            addBoxButton.onclick = function () {
+                var mainContainer = document.querySelector('#main');
+
+                var box = document.createElement('div');
+                box.style.setProperty('width', 100);
+                box.style.setProperty('margin', '2 2 2 2');
+                box.style.height = 100;
+                box.style.backgroundColor = '#f00';
+                box.onmouseover = function () {
+                    box.style.backgroundColor = getRandomColor();
+                }
+                mainContainer.appendChild(box);
+            }
+
+            //ex2:
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            //ex3:
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var divNamesList = document.querySelector('#listNames');
+            for (const name of nomes) {
+                var listElement = document.createElement('ul');
+                var textElement = document.createTextNode(name);
+                listElement.appendChild(textElement);
+                divNamesList.appendChild(listElement);
+            }
+
+            //ex4
+            function adicionar(){
+                var divNamesList = document.querySelector('#listNames');
+                var inputTxt = document.querySelector('input[name="nome"]');
+                
+                var listElement = document.createElement('ul');
+                var textElement = document.createTextNode(inputTxt.value);
+                listElement.appendChild(textElement);
+                divNamesList.appendChild(listElement);}
+        </script>
+    </body>
+
+</html>
