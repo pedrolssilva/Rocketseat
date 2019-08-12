@@ -16,7 +16,7 @@ export default function Login(){
             placeholderTextColor="#999"
             style={styles.input}
             />
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity onPress={handleLogin} style={styles.button}>
                 <Text style={styles.buttonText}>Enviar</Text>
             </TouchableOpacity>
         </KeyboardAvoidingView>
